@@ -18,27 +18,29 @@ export default class HomeScreenComponent extends Component {
 		return(
 			<View style={styles.container}>
 
-				
-				<Text>SPACE INVADER SHOOTER 3.0</Text>
+				<Button
+					onPress={() => navigate('Info')}
+					title="SPACE INVADER SHOOTER 3.0"
+				/>
 				<Text></Text>
 				<Text></Text>
 				<Text></Text>
 				<Button
-					onPress={() => navigate('Main')}
-					title="PLAY"
+					onPress={() => navigate('Info')}
+					title="Pick a Difficulty Level"
 				/>
 				<Button
 					style={styles.text}
 					onPress={() => navigate('Main')}
-					title="EASY DIFFICULTY"
+					title="EASY"
 				/>
 				<Button
 					onPress={() => navigate('Main')}
-					title="MEDIUM DIFFICULTY"
+					title="MEDIUM"
 				/>
 				<Button
 					onPress={() => navigate('Main')}
-					title="HARD DIFFICULTY"
+					title="HARD"
 				/>
 				<Icon
 				name="reddit-alien"
