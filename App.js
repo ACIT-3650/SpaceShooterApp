@@ -18,6 +18,7 @@ import { StackNavigator } from 'react-navigation';
 import HomeScreenComponent from "./components/HomeScreenComponent";
 import MainComponent from "./components/MainComponent";
 import InfoComponent from "./components/InfoComponent";
+import SpaceShip from "./components/SpaceShip";
 
 const ImageApp = StackNavigator({
   Home: {
@@ -37,7 +38,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-        <ImageApp/>
+        <SpaceShip/>
     );
   }
 }
