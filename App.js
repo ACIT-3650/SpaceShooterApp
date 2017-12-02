@@ -25,7 +25,7 @@ const SpaceApp = StackNavigator({
     screen: HomeScreenComponent
   },
   Main: {
-    screen: MainComponent
+    screen: SpaceShip
   },
   Info: {
     screen: InfoComponent
@@ -38,7 +38,11 @@ export default class App extends React.Component {
 
   render() {
     return (
+<<<<<<< HEAD
         <SpaceApp/>
+=======
+        <SpaceApp />
+>>>>>>> d23f6fc400816791e294d877d5320b269a81e2bf
     );
   }
 }
