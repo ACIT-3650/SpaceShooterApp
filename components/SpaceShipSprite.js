@@ -7,7 +7,7 @@ const SpaceShipSprite = {
     size: {width: 75, height: 75},
     animationTypes: ['IDLE'],
     frames: [
-        require('./nightraiderfixed.png'),
+        require('../assets/Dorito.png'),
     ],
     animationIndex: function getAnimationIndex (animationType) {
         switch (animationType) {
