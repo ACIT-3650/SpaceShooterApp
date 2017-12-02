@@ -28,8 +28,10 @@ const ImageApp = StackNavigator({
   },
   Info: {
     screen: InfoComponent
- },
-});
+ }
+},{ 
+    headerMode: 'screen' 
+  });
 
 export default class App extends React.Component {
 

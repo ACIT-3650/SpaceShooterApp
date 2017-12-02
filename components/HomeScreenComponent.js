@@ -3,25 +3,32 @@ import PropTypes from 'prop-types';
 import { Text,
  		 View,
   		 Button,
-   		 StyleSheet } from 'react-native';
+   		 StyleSheet,
+   		 Image } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
+
+
 
 export default class HomeScreenComponent extends Component {
 
 	static navigationOptions = {
-		title: 'Space Invader',
+		title: 'Space Invader', header: null
 	};
 
 	render() {
 		const  {navigate} = this.props.navigation;
 		return(
 			<View style={styles.container}>
-
-				<Button
-					onPress={() => navigate('Info')}
-					title="SPACE INVADER SHOOTER 3.0"
-				/>
+			 <Image  style={{
+          flex: 1,
+          position: "absolute"
+        }}source={require('../pictures/wallpaper.jpg')}> 	
+				
+	</Image>
+<Image source={require('../pictures/LOGO.png')}> 	
+				
+	</Image>
 				<Text></Text>
 				<Text></Text>
 				<Text></Text>
@@ -60,9 +67,15 @@ export default class HomeScreenComponent extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#551A8B',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  backgroundContainer: {
+    flex: 1,
+    resizeMode: 'cover',
+    width: undefined,
+    height: undefined,
+    backgroundColor: '#889DAD',
   },
   text: {
     flex: 1,
