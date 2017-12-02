@@ -20,12 +20,12 @@ import MainComponent from "./components/MainComponent";
 import InfoComponent from "./components/InfoComponent";
 import SpaceShip from "./components/SpaceShip";
 
-const ImageApp = StackNavigator({
+const SpaceApp = StackNavigator({
   Home: {
     screen: HomeScreenComponent
   },
   Main: {
-    screen: MainComponent
+    screen: SpaceShip
   },
   Info: {
     screen: InfoComponent
@@ -38,7 +38,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-        <SpaceShip/>
+        <SpaceApp />
     );
   }
 }
