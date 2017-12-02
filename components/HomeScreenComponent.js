@@ -21,39 +21,42 @@ export default class HomeScreenComponent extends Component {
 		return(
 			<View style={styles.container}>
 			 <Image  style={{
-          flex: 1,
-          position: "absolute"
-        }}source={require('../pictures/wallpaper.jpg')}> 	
+        		  flex: 1,
+        		  position: "absolute"
+        		}}source={require('../pictures/wallpaper.jpg')}> 	
 				
-	</Image>
-<Image source={require('../pictures/LOGO.png')}> 	
+			</Image>
+
+			<Image source={require('../pictures/LOGO.png')}> 	
 				
-	</Image>
-				<Text></Text>
-				<Text></Text>
-				<Text></Text>
+			</Image>
+				<Text style={{fontSize: 25, fontWeight:'bold', color:'red'}}>
+					ENTER WITH CAUTION
+				</Text>
+
 				<Button
-					onPress={() => navigate('Info')}
-					title="Pick a Difficulty Level"
-				/>
-				<Button
-					style={styles.text}
 					onPress={() => navigate('Main')}
 					title="EASY"
+					color="#FFA500"
 				/>
+
 				<Button
 					onPress={() => navigate('Main')}
 					title="MEDIUM"
+					color="#FFA500"
+
 				/>
+				
 				<Button
 					onPress={() => navigate('Main')}
 					title="HARD"
+					color="#FFA500"
 				/>
-				<Icon
-				name="reddit-alien"
-				size={200}
-				color="green"
-				/>
+
+				<Image style={{width: 150, height: 150}} source={require('../pictures/helmet.png')}> 	
+				
+				</Image>
+				
 
 				<Button
 					onPress={() => navigate('Info')}
@@ -69,6 +72,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'transparent',
   },
   backgroundContainer: {
     flex: 1,
