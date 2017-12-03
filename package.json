@@ -8,6 +8,7 @@
     "react-native-animated-sprite": "^0.11.1",
     "react-native-background-audio": "^1.1.4",
     "react-native-share": "^1.0.23",
+    "react-native-sound": "^0.10.4",
     "react-native-sprite": "^0.1.2",
     "react-native-vector-icons": "^4.4.2",
     "react-navigation": "^1.0.0-beta.21",
