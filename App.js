@@ -1,10 +1,9 @@
 /* 
   ACIT 3650
-
-  Must install!!!
    npm install
    npm install react-navigation --save
    npm install react-native-vector-icons --save
+   npm install react-native-animated-animated-sprite --save
    
 */
 
@@ -18,6 +17,7 @@ import { StackNavigator } from 'react-navigation';
 import HomeScreenComponent from "./components/HomeScreenComponent";
 import MainComponent from "./components/MainComponent";
 import InfoComponent from "./components/InfoComponent";
+import GameoverComponent from "./components/GameoverComponent";
 import SpaceShip from "./components/SpaceShip";
 
 const SpaceApp = StackNavigator({
@@ -38,7 +38,9 @@ export default class App extends React.Component {
 
   render() {
     return (
-        <SpaceApp />
+
+        <SpaceApp/>
+
     );
   }
 }

@@ -8,61 +8,66 @@ import { Text,
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export default class InfoComponent extends Component {
+export default class GameoverComponent extends Component {
 
 	static navigationOptions= {
-		title: 'Info Page',
+		title: 'Gameover Page',
 	};
 	render() {
-
+		const  {navigate} = this.props.navigation;
 		return (
 			<View style={styles.container}>
 
 				<Image  style={{
         		  	flex: 1,
         		  	position: "absolute"
-        			}}source={require('../pictures/wallpaper.jpg')}> 	
+        			}}source={require('../pictures/GameoverWallpaper.jpg')}> 	
 				</Image>
+
+				<Image source={require('../pictures/GameoverLogo.png')}> 
+				</Image>
+
+				
+				<Text style={{fontSize: 22, fontWeight:'bold', color:'red'}}>Play again if you DARE</Text>
 				<Text></Text>
 				<Text></Text>
-				<Text style={{fontSize: 19, fontWeight:'bold', color:'orange'}}>-- Welcome to Space In Vader 3.0 --</Text>
+				<Text></Text>
+				<Text></Text>
+				<Text></Text>
+				<Text></Text>
+				<Text></Text>
+				<Text></Text>
+				<Text></Text>
+				<Button
+					onPress={() => navigate('Main')}
+					title="PLAY AGAIN"
+					color="#FFFF00"
+				/>
+				<Button
+					onPress={() => navigate('Home')}
+					title="HOME SCREEN"
+					color="#FFFF00"
+				/>
+				<Text></Text>
+				<Text></Text>
+
+				<Text></Text>
+				<Text></Text>
+				<Text></Text>
+				<Text></Text>
+				<Text></Text>
+				<Text></Text>
 				<Text></Text>
 				<Text></Text>
 				<Text></Text>
 				<Icon
-				name="reddit-alien"
-				size={100}
-				color="green"
+					name="gamepad"
+					size={100}
+					color="yellow"
 				/>
 				
-				<Text></Text>
-				<Text style={{fontSize: 20, fontWeight:'bold', color:'red'}}>RULES: </Text>
-				
-				<Text></Text>
-				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>1. Do not have mercy</Text>
-				<Text></Text>
-				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>2. Stay alive</Text>
-				<Text></Text>
-				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>3. Stay alert</Text>
-				<Text></Text>
-				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>4. KILL ALL THE ALIENS!!!!</Text>
-				<Text></Text>
-				<Text></Text>
-				<Text></Text>
-
-				<Text></Text>
-				<Text style={{fontSize: 15, fontWeight:'bold', color:'orange'}}>Note: Try all the difficulties for an experience out of this world! :)</Text>
-				<Text></Text>
-				<Text></Text>
-				<Text></Text>
-				<Text></Text>
-				<Text></Text>
-
-				
-				
 				<Text style={{fontSize: 10, fontWeight:'bold', color:'orange'}}>Version 3.0</Text>
-				<Text style={{fontSize: 7, fontWeight:'bold', color:'orange'}}>Authors: RP, KT, ML</Text>
-
+				<Text></Text>
 			</View>
 		);
 	}
