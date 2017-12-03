@@ -30,37 +30,47 @@ export default class HomeScreenComponent extends Component {
 			<Image source={require('../pictures/LOGO.png')}> 	
 				
 			</Image>
-				<Text style={{fontSize: 25, fontWeight:'bold', color:'red'}}>
-					ENTER WITH CAUTION
-				</Text>
 
+			<Text style={{fontSize: 25, fontWeight:'bold', color:'red'}}>
+				ENTER WITH CAUTION
+			</Text>
+
+			<Text></Text>
+
+			<View style={{
+				width: 100,
+			}}>
 				<Button
 					onPress={() => navigate('Main')}
 					title="EASY"
-					color="#FFA500"
+					color="#00ff66"
 				/>
-
+				<Text></Text>
 				<Button
 					onPress={() => navigate('Main')}
 					title="MEDIUM"
-					color="#FFA500"
+					color="#ffcc33"
 
 				/>
-				
+				<Text></Text>
 				<Button
 					onPress={() => navigate('Main')}
 					title="HARD"
-					color="#FFA500"
+					color="#ff3333"
 				/>
+				<Text></Text>
+			</View>
 
 				<Image style={{width: 150, height: 150}} source={require('../pictures/helmet.png')}> 	
 				
 				</Image>
-				
+
+				<Text></Text>
 
 				<Button
 					onPress={() => navigate('Info')}
 					title="Instructions"
+					color="#00ccff"
 				/>
 			</View>
 		);

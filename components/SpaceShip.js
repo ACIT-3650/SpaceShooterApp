@@ -1,4 +1,6 @@
-
+/**
+ * Created by renzo on 2017-11-27.
+ */
 import React, { Component } from 'react';
 import {StyleSheet, Text, View, Button, Animated, Easing, Dimensions, TouchableHighlight, Image} from 'react-native';
 // import sample from 'lodash.sample';
@@ -59,7 +61,7 @@ export default class SpaceShip extends Component {
             this.state.showShoot = true;
             this.setState(this.state);
             this.timeoutHandle = setTimeout(()=>{//after 5 seconds the image is removed by calling _resetShoot
-                                console.log("HI");
+                console.log("Done Shooting");
                 this._resetShoot();
          }, 5000);   
          this.state.cooldown = false;         
@@ -68,17 +70,18 @@ export default class SpaceShip extends Component {
 
     _renderShoot(){
     if (this.state.showShoot) {
-            console.log("shoot");
-             test = this.refs.SpaceShipRef.getCoordinates();
+            setCoords = this.refs.SpaceShipRef.getCoordinates();
+            topsetCoords = setCoords.top;
+            console.log(topsetCoords);
+
         const movenachoMOOOVE = this.animatedValue.interpolate({
             inputRange: [0,1],
-            outputRange: [test.top - test.top/5,-400]
+            outputRange: [topsetCoords,-400]
         });
             return (
-                <Animated.Image style={{width: 100, height: 100, top: movenachoMOOOVE, left: test.left}} source={require('../assets/nacho.gif')}/>                                       
+                <Animated.Image style={{width: 100, height: 100, top: movenachoMOOOVE, left: setCoords.left}} source={require('../assets/nacho.gif')}/>                                       
             );
         } else {
-            console.log("no shoot");
             return null;
         }
     }
@@ -95,9 +98,15 @@ export default class SpaceShip extends Component {
         });
         return(
             <View style={{flex: 1}}>
+<Image  style={{
+                  flex: 1,
+                  position: "absolute"
+                }}source={require('../pictures/wallpaper.jpg')}>    
+                
+            </Image>            
                 <Animated.Image style={{width: 100, height: 100, top: fall, left: this.state.projectilePosition}} source={{uri: 'http://www.clipartlord.com/wp-content/uploads/2016/04/aestroid.png'}}/>
                 <View>
-                
+                  
                     <AnimatedSprite
                         ref={"SpaceShipRef"}
                         sprite={SpaceShipSprite}
