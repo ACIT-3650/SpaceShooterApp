@@ -1,6 +1,3 @@
-/**
- * Created by renzo on 2017-11-27.
- */
 
 const SpaceShipSprite = {
     name:"ship",
