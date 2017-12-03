@@ -40,8 +40,7 @@ export default class MainComponent extends Component {
 
 		return (
 			<View style={styles.container}>
-				
-
+		
 				<StatusBarComponent/>
 
 				<Icon

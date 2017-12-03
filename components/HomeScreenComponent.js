@@ -7,6 +7,7 @@ import { Text,
    		 Image } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
+import BgAudio from 'react-native-background-audio'
 
 
 
@@ -19,7 +20,9 @@ export default class HomeScreenComponent extends Component {
 	render() {
 		const  {navigate} = this.props.navigation;
 		return(
+
 			<View style={styles.container}>
+			<BgAudio options={audio_options}></BgAudio>
 			 <Image  style={{
         		  flex: 1,
         		  position: "absolute"
@@ -86,3 +89,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#39ff14',
   },
 });
+
+const audio_options = {
+  source:{local: require('../music/MainMusic300.mp3')} 
+}
