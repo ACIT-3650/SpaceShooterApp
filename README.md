@@ -6,7 +6,7 @@ Note: Turn on volume for music.
 
 #Screenshot
 
-![ScreenShot](https://raw.github.com/ACIT-3650/SpaceShooterApp/Pictures/{Screenshot.PNG})
+![alt text](https://raw.githubusercontent.com/michael5608/ACIT-3650/SpaceShooterApp/Pictures/Screenshot.png)
 
 
 ### Installation Commands
