@@ -43,7 +43,7 @@ export default class InfoComponent extends Component {
 				<Text></Text>
 				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>2. Stay alive</Text>
 				<Text></Text>
-				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>3. Stay alert</Text>
+				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>3. One shot per 5secs</Text>
 				<Text></Text>
 				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>4. KILL ALL THE ALIENS!!!!</Text>
 				<Text></Text>

@@ -20,6 +20,8 @@ import InfoComponent from "./components/InfoComponent";
 import GameoverComponent from "./components/GameoverComponent";
 import SpaceShip from "./components/SpaceShip";
 
+console.disableYellowBox = true;
+
 const SpaceApp = StackNavigator({
   Home: {
     screen: HomeScreenComponent
@@ -38,7 +40,6 @@ export default class App extends React.Component {
 
   render() {
     return (
-
         <SpaceApp/>
 
     );
