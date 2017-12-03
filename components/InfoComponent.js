@@ -33,7 +33,7 @@ export default class InfoComponent extends Component {
 				<Text>Note: Play the other difficulties for an experience out of this world</Text>
 				<Text></Text>
 				<Text></Text>
-				<Text>Version 2.0</Text>
+				<Text>Version 3.0</Text>
 				<Text>Author: RP, KT, ML</Text>
 			</View>
 		);

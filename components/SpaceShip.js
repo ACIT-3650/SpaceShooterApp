@@ -17,47 +17,35 @@ export default class SpaceShip extends Component {
             windowWidth: Dimensions.get('window').width,
             windowHeight: Dimensions.get('window').height,
             projectilePosition: 0,
-            animationspeed: 1
+            animationspeed: 1,
+            showShoot: false,
+            cooldown: false,
         };
     }
+
     componentDidMount(){
         this.animate();
     }   
+
     getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
     }
+
     animate() {
-                    var cheese;
-            cheese = this.state.windowWidth - 200;
         this.setState({
-            projectilePosition: this.getRandomInt(1, cheese)
+            projectilePosition: this.getRandomInt(1, this.state.windowWidth)
         });
 
         if(this.state.animationspeed < 2){
             var animatedtiming = 0.05;
             this.state.animationspeed += animatedtiming;
         }
-        console.log(this.state.animationspeed);
-        var refreshIntervalId;
-        // var test;
-        // refreshIntervalId = setInterval(() => {
-        //     test = this.refs.SpaceShipRef.getCoordinates();
-        //     //console.log(test);
-        //     console.log(test);
-        //     console.log(this.state.projectilePosition);
 
-
-        //     // if(this.state.moveEnemyval._value > windhowH - 280 
-        //     //     && this.state.moveEnemyval._value < windowH -180
-        //     //     && this.state.playerSide == this.state.enemySide){
-        //     //         console.log("Hit");
-        //     // }
-        // }, 50);
 
         this.animatedValue.setValue(0);
-        Animated.timing(
+        Animated.timing(        
             this.animatedValue,
             {
                 toValue: this.state.animationspeed,
@@ -67,15 +55,46 @@ export default class SpaceShip extends Component {
         ).start(() => this.animate())
     }
 
-    _onPressButton(){
-        console.log("CLICKED");
+    _onPressButton(){//when the button is clicked it allows _renderShoot to create the image
+        if(this.state.cooldown == false){//prevents people from spamming shoot so they can only shoot once every 5 seconds
+            this.state.cooldown = true;
+            this.state.showShoot = true;
+            this.setState(this.state);
+            this.timeoutHandle = setTimeout(()=>{//after 5 seconds the image is removed by calling _resetShoot
+                                console.log("HI");
+                this._resetShoot();
+         }, 5000);   
+         this.state.cooldown = false;         
+        }
     }
+
+    _renderShoot(){
+    if (this.state.showShoot) {
+            console.log("shoot");
+             test = this.refs.SpaceShipRef.getCoordinates();
+        const movenachoMOOOVE = this.animatedValue.interpolate({
+            inputRange: [0,1],
+            outputRange: [test.top - test.top/5,-400]
+        });
+            return (
+                <Animated.Image style={{width: 100, height: 100, top: movenachoMOOOVE, left: test.left}} source={require('../assets/nacho.gif')}/>                                       
+            );
+        } else {
+            console.log("no shoot");
+            return null;
+        }
+    }
+
+    _resetShoot(){
+        this.state.showShoot = false;
+        this.setState(this.state);        
+    }
+
     render(){
-        const  fall = this.animatedValue.interpolate({
+        const fall = this.animatedValue.interpolate({
             inputRange: [0,1],
             outputRange: [-100, this.state.windowHeight]
         });
-        const viewPosition = ((0 - this.state.windowHeight) / 2);
         return(
             <View style={{flex: 1}}>
                 <Animated.Image style={{width: 100, height: 100, top: fall, left: this.state.projectilePosition}} source={{uri: 'http://www.clipartlord.com/wp-content/uploads/2016/04/aestroid.png'}}/>
@@ -97,7 +116,10 @@ export default class SpaceShip extends Component {
                         draggable={true}
                     />                 
                 </View>
-                    <TouchableHighlight 
+                    <TouchableHighlight
+                        onPress={() => {
+                            this._onPressButton();
+                        }}
                         style = {{
                             width: 100,
                             height: 100,
@@ -106,7 +128,8 @@ export default class SpaceShip extends Component {
                             alignSelf: 'flex-end',
 
                         }}
-                        onPress={this._onPressButton}>
+                        disabled={this.state.showShoot}
+                        >
                         <Image
                             style = {{
                                 width: 100,
@@ -114,7 +137,8 @@ export default class SpaceShip extends Component {
                             }}
                             source={require('../assets/shootbut.png')}
                         />
-                    </TouchableHighlight>                   
+                    </TouchableHighlight>   
+                    {this._renderShoot()}               
             </View>
         )
     }
