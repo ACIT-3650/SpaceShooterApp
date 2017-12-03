@@ -49,6 +49,7 @@ export default class InfoComponent extends Component {
 				<Text></Text>
 				<Text></Text>
 				<Text></Text>
+
 				<Text></Text>
 				<Text style={{fontSize: 15, fontWeight:'bold', color:'orange'}}>Note: Try all the difficulties for an experience out of this world! :)</Text>
 				<Text></Text>
@@ -61,6 +62,7 @@ export default class InfoComponent extends Component {
 				
 				<Text style={{fontSize: 10, fontWeight:'bold', color:'orange'}}>Version 3.0</Text>
 				<Text style={{fontSize: 7, fontWeight:'bold', color:'orange'}}>Authors: RP, KT, ML</Text>
+
 			</View>
 		);
 	}
