@@ -1,6 +1,4 @@
-/**
- * Created by renzo on 2017-11-27.
- */
+
 import React, { Component } from 'react';
 import {StyleSheet, Text, View, Button, Animated, Easing, Dimensions, TouchableHighlight, Image} from 'react-native';
 // import sample from 'lodash.sample';
