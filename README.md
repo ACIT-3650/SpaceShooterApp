@@ -4,6 +4,10 @@ This is a shooting game for your mobile phone. There are three difficulties to p
 
 Note: Turn on volume for music.
 
+#Screenshot
+
+![ScreenShot](https://raw.github.com/ACIT-3650/SpaceShooterApp/Pictures/{Screenshot.PNG})
+
 
 ### Installation Commands
 

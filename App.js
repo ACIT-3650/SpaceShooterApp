@@ -5,6 +5,7 @@
    npm install react-native-vector-icons --save
    npm install react-native-animated-animated-sprite --save
    npm install react-native-background-audio --save
+   npm install react-native-sound --save
    
 */
 
