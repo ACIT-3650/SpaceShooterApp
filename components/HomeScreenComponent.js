@@ -101,5 +101,6 @@ const styles = StyleSheet.create({
 });
 
 const audio_options = {
-  source:{local: require('../music/MainMusic300.mp3')} 
+  source:{local: require('../music/MainMusic300.mp3')},
+  setCurrentTime: 2.5	
 }

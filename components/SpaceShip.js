@@ -20,6 +20,7 @@ export default class SpaceShip extends Component {
             animationspeed: 1,
             showShoot: false,
             cooldown: false,
+            test: false
         };
     }
 
@@ -72,7 +73,7 @@ export default class SpaceShip extends Component {
     if (this.state.showShoot) {
             setCoords = this.refs.SpaceShipRef.getCoordinates();
             topsetCoords = setCoords.top;
-            console.log(topsetCoords);
+            console.log(setCoords.left);
 
         const movenachoMOOOVE = this.animatedValue.interpolate({
             inputRange: [0,1],
@@ -106,7 +107,6 @@ export default class SpaceShip extends Component {
             </Image>            
                 <Animated.Image style={{width: 100, height: 100, top: fall, left: this.state.projectilePosition}} source={{uri: 'http://www.clipartlord.com/wp-content/uploads/2016/04/aestroid.png'}}/>
                 <View>
-                  
                     <AnimatedSprite
                         ref={"SpaceShipRef"}
                         sprite={SpaceShipSprite}
