@@ -44,7 +44,7 @@ export default class HomeScreenComponent extends Component {
 				width: 100,
 			}}>
 				<Button
-					onPress={() => navigate('Main')}
+					onPress={() => navigate('Main', {name: 'Brent'})}
 					title="EASY"
 					color="#00ff66"
 				/>
@@ -101,6 +101,5 @@ const styles = StyleSheet.create({
 });
 
 const audio_options = {
-  source:{local: require('../music/MainMusic300.mp3')},
-  setCurrentTime: 2.5	
+  source:{local: require('../music/MainMusic300.mp3')}
 }
