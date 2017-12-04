@@ -4,7 +4,7 @@ This is a shooting game for your mobile phone. There are three difficulties to p
 
 Note: Turn on volume for music.
 
-#Screenshot
+# Screenshot
 
 <img src="https://user-images.githubusercontent.com/22303130/33531547-56fa8b6e-d843-11e7-9ed6-5d2785d0ead2.PNG" height="736px" width="414px">
 
