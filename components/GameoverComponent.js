@@ -11,7 +11,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 export default class GameoverComponent extends Component {
 
 	static navigationOptions= {
-		title: 'Gameover Page',
+		title: 'Gameover Page', header: null
 	};
 	render() {
 		const  {navigate} = this.props.navigation;

@@ -7,17 +7,18 @@ import { Text,
    		 Image } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
+import StatusBarComponent from "./StatusBarComponent";
 
 export default class InfoComponent extends Component {
 
 	static navigationOptions= {
-		title: 'Info Page',
+		title: 'Instructions',
 	};
 	render() {
 
 		return (
 			<View style={styles.container}>
-
+			<StatusBarComponent/>
 				<Image  style={{
         		  	flex: 1,
         		  	position: "absolute"
