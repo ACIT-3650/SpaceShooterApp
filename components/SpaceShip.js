@@ -3,7 +3,15 @@
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {StyleSheet, Text, View, Button, Animated, Easing, Dimensions, TouchableHighlight, Image} from 'react-native';
+import {StyleSheet, 
+        Text, 
+        View, 
+        Button, 
+        Animated, 
+        Easing, 
+        Dimensions, 
+        TouchableHighlight, 
+        Image} from 'react-native';
 // import sample from 'lodash.sample';
 
 import AnimatedSprite from 'react-native-animated-sprite';

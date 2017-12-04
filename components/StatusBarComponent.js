@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Text,
-		 View,
-		 StatusBar } from 'react-native';
+import { Text, View, StatusBar } from 'react-native';
 
 export default class StatusBarComponent extends Component {
 
@@ -10,6 +8,7 @@ export default class StatusBarComponent extends Component {
 		super(props);
 		this.state = {
 			barStyle: this.props.barStyle
+
 		}
 	}
 
@@ -20,6 +19,20 @@ export default class StatusBarComponent extends Component {
 	render() {
 		return (
 			<View>
+			<StatusBar 
+			backgroundColor="white"
+			barStyle={this.state.barStyle}
+			/>
+			<Text>Test</Text>
+			</View>
+			)
+	}
+}
+
+/*
+	render() {
+		return (
+			<View>
 				<StatusBar 
 				backgroundColor='black'
 				barStyle="light-content"
@@ -27,4 +40,4 @@ export default class StatusBarComponent extends Component {
 			</View>
 		)
 	}
-}
+}*/

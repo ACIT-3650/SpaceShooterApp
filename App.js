@@ -17,7 +17,6 @@ import { StackNavigator } from 'react-navigation';
 
 
 import HomeScreenComponent from "./components/HomeScreenComponent";
-import MainComponent from "./components/MainComponent";
 import InfoComponent from "./components/InfoComponent";
 import GameoverComponent from "./components/GameoverComponent";
 import SpaceShip from "./components/SpaceShip";
@@ -32,7 +31,7 @@ const SpaceApp = StackNavigator({
     screen: SpaceShip
   },
   Info: {
-    screen: GameoverComponent
+    screen: InfoComponent
  }
 },{ 
     headerMode: 'screen' 

@@ -55,8 +55,6 @@ export default class InfoComponent extends Component {
 				<Text></Text>
 				<Text></Text>
 				<Text></Text>
-
-				
 				
 				<Text style={{fontSize: 10, fontWeight:'bold', color:'orange'}}>Version 3.0</Text>
 				<Text style={{fontSize: 7, fontWeight:'bold', color:'orange'}}>Authors: RP, KT, ML</Text>

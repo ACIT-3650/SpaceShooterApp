@@ -2,7 +2,13 @@
  * Created by renzo on 2017-12-01.
  */
 import React, { Component } from 'react';
-import {StyleSheet, Text, View,  Animated, Easing, Dimensions, Image} from 'react-native';
+import {StyleSheet, 
+        Text, 
+        View,  
+        Animated, 
+        Easing, 
+        Dimensions, 
+        Image} from 'react-native';
 
 export  default class Asteroids extends Component {
     // constructor(props){
