@@ -6,7 +6,7 @@ Note: Turn on volume for music.
 
 # Screenshot
 
-<img src="https://user-images.githubusercontent.com/22303130/33531547-56fa8b6e-d843-11e7-9ed6-5d2785d0ead2.PNG" height="520px" width="320px">
+<img src="https://user-images.githubusercontent.com/22303130/33533129-f04ebc12-d853-11e7-92d6-9f8fe5134b36.PNG" height="520px" width="320px">
 
 
 ### Installation Commands
