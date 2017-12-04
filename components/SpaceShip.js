@@ -21,6 +21,7 @@ export default class SpaceShip extends Component {
             animationspeed: 1,
             showShoot: false,
             cooldown: false,
+            test: false
         };
     }
 
@@ -77,10 +78,13 @@ export default class SpaceShip extends Component {
 
         const movenachoMOOOVE = this.animatedValue.interpolate({
             inputRange: [0,1],
-            outputRange: [topsetCoords,-400]
+            outputRange: [topsetCoords-60,-400]
         });
             return (
-                <Animated.Image style={{width: 100, height: 100, top: movenachoMOOOVE, left: setCoords.left}} source={require('../assets/nacho.gif')}/>                                       
+                <View>
+                <Animated.Image style={{width: 10, height: 40, top: movenachoMOOOVE, left: (setCoords.left+37)}} source={require('../assets/Beam.png')}/>
+                <Image style={{width: 40, height: 30, top: (topsetCoords - 60), left: (setCoords.left+22), zIndex: -1}} source={require('../assets/shooter.png')}></Image>
+                </View>
             );
         } else {
             return null;
@@ -99,15 +103,15 @@ export default class SpaceShip extends Component {
         });
         return(
             <View style={{flex: 1}}>
-<Image  style={{
+                <Image  style={{
                   flex: 1,
-                  position: "absolute"
+                  position: "absolute",
+                  zIndex: -2
                 }}source={require('../pictures/wallpaper.jpg')}>    
                 
             </Image>            
                 <Animated.Image style={{width: 100, height: 100, top: fall, left: this.state.projectilePosition}} source={{uri: 'http://www.clipartlord.com/wp-content/uploads/2016/04/aestroid.png'}}/>
                 <View>
-                  
                     <AnimatedSprite
                         ref={"SpaceShipRef"}
                         sprite={SpaceShipSprite}
