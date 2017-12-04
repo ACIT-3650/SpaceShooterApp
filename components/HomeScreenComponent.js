@@ -8,8 +8,7 @@ import { Text,
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import BgAudio from 'react-native-background-audio'
-
-
+import SpaceShip,{test2} from './SpaceShip.js';
 
 export default class HomeScreenComponent extends Component {
 
@@ -17,12 +16,13 @@ export default class HomeScreenComponent extends Component {
 		title: 'Space Invader', header: null
 	};
 
+
 	render() {
 		const  {navigate} = this.props.navigation;
 		return(
-
 			<View style={styles.container}>
 			<BgAudio options={audio_options}></BgAudio>
+			
 			 <Image  style={{
         		  flex: 1,
         		  position: "absolute"
@@ -44,21 +44,20 @@ export default class HomeScreenComponent extends Component {
 				width: 100,
 			}}>
 				<Button
-					onPress={() => navigate('Main', {name: 'Brent'})}
+					onPress={() => navigate('Main', {diff: 0.01, cap:2})}
 					title="EASY"
 					color="#00ff66"
 				/>
 				<Text></Text>
 				<Button
-					onPress={() => navigate('Main')}
+					onPress={() => navigate('Main', {diff: 0.05, cap:3})}
 					title="MEDIUM"
 					color="#ffcc33"
-
 				/>
 				<Text></Text>
 				<Button
-					onPress={() => navigate('Main')}
-					title="HARD"
+					onPress={() => navigate('Main', {diff: 0.1, cap:4})}
+					title="INSANE"
 					color="#ff3333"
 				/>
 				<Text></Text>
