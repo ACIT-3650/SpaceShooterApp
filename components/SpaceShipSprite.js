@@ -1,10 +1,10 @@
 
 const SpaceShipSprite = {
     name:"ship",
-    size: {width: 75, height: 75},
+    size: {width: 85, height: 75},
     animationTypes: ['IDLE'],
     frames: [
-        require('../assets/Dorito.png'),
+        require('../assets/Ship.png'),
     ],
     animationIndex: function getAnimationIndex (animationType) {
         switch (animationType) {
