@@ -80,7 +80,7 @@ export default class SpaceShip extends Component {
             outputRange: [topsetCoords,-400]
         });
             return (
-                <Animated.Image style={{width: 100, height: 100, top: movenachoMOOOVE, left: setCoords.left}} source={require('../assets/nacho.gif')}/>                                       
+                <Animated.Image style={{width: 10, height: 40, top: movenachoMOOOVE, left: (setCoords.left+39)}} source={require('../assets/Beam.png')}/>                                       
             );
         } else {
             return null;
