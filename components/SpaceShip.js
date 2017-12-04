@@ -2,6 +2,7 @@
  * Created by renzo on 2017-11-27.
  */
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {StyleSheet, Text, View, Button, Animated, Easing, Dimensions, TouchableHighlight, Image} from 'react-native';
 // import sample from 'lodash.sample';
 
@@ -24,7 +25,7 @@ export default class SpaceShip extends Component {
     }
 
     componentDidMount(){
-        this.animate();
+        this.animate();   
     }   
 
     getRandomInt(min, max) {
@@ -55,7 +56,7 @@ export default class SpaceShip extends Component {
         ).start(() => this.animate())
     }
 
-    _onPressButton(){//when the button is clicked it allows _renderShoot to create the image
+    _onPressButton(){//when the button is clicked it allows _renderShoot to create the image  
         if(this.state.cooldown == false){//prevents people from spamming shoot so they can only shoot once every 5 seconds
             this.state.cooldown = true;
             this.state.showShoot = true;
@@ -72,7 +73,7 @@ export default class SpaceShip extends Component {
     if (this.state.showShoot) {
             setCoords = this.refs.SpaceShipRef.getCoordinates();
             topsetCoords = setCoords.top;
-            console.log(topsetCoords);
+            console.log(setCoords.left);
 
         const movenachoMOOOVE = this.animatedValue.interpolate({
             inputRange: [0,1],
