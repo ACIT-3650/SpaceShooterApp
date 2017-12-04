@@ -7,6 +7,7 @@ import {StyleSheet, Text, View, Button, Animated, Easing, Dimensions, TouchableH
 
 import AnimatedSprite from 'react-native-animated-sprite';
 import SpaceShipSprite from './SpaceShipSprite';
+import Asteroids from "./Asteroids";
 
 export default class SpaceShip extends Component {
     constructor() {
@@ -104,8 +105,8 @@ export default class SpaceShip extends Component {
                   position: "absolute"
                 }}source={require('../pictures/wallpaper.jpg')}>    
                 
-            </Image>            
-                <Animated.Image style={{width: 100, height: 100, top: fall, left: this.state.projectilePosition}} source={{uri: 'http://www.clipartlord.com/wp-content/uploads/2016/04/aestroid.png'}}/>
+            </Image>
+                <Asteroids fall={fall} projectilePosition={this.state.projectilePosition}/>
                 <View>
                     <AnimatedSprite
                         ref={"SpaceShipRef"}
