@@ -19,6 +19,11 @@ import SpaceShipSprite from './SpaceShipSprite';
 import Asteroids from "./Asteroids";
 
 export default class SpaceShip extends Component {
+
+    static navigationOptions = {
+        title: 'Battle Screen', header: null
+    };
+
     constructor() {
         super();
         this.animatedValue = new Animated.Value(0);
@@ -30,12 +35,11 @@ export default class SpaceShip extends Component {
             animationspeed: 1,
             showShoot: false,
             cooldown: false,
-            test: false
         };
     }
 
     componentDidMount(){
-        this.animate();   
+        this.animate(); 
     }   
 
     getRandomInt(min, max) {
@@ -49,12 +53,14 @@ export default class SpaceShip extends Component {
             projectilePosition: this.getRandomInt(1, this.state.windowWidth)
         });
 
-        if(this.state.animationspeed < 2){
-            var animatedtiming = 0.05;
+        console.log(this.props.navigation);
+
+        if(this.state.animationspeed < this.props.navigation.state.params.cap){
+            var animatedtiming = this.props.navigation.state.params.diff;
             this.state.animationspeed += animatedtiming;
         }
 
-
+        console.log(this.state.animationspeed);
         this.animatedValue.setValue(0);
         Animated.timing(        
             this.animatedValue,
@@ -83,8 +89,6 @@ export default class SpaceShip extends Component {
     if (this.state.showShoot) {
             setCoords = this.refs.SpaceShipRef.getCoordinates();
             topsetCoords = setCoords.top;
-            console.log(setCoords.left);
-
         const movenachoMOOOVE = this.animatedValue.interpolate({
             inputRange: [0,1],
             outputRange: [topsetCoords-60,-400]
@@ -125,8 +129,8 @@ export default class SpaceShip extends Component {
                         ref={"SpaceShipRef"}
                         sprite={SpaceShipSprite}
                         coordinates={{
-                            top: 100,
-                            left: 100,
+                            top: this.state.windowHeight/2,
+                            left: this.state.windowWidth/2,
                         }}
                         animationFrameIndex={SpaceShipSprite.animationIndex(this.state.animationType)}
                         loopAnimation={false}
