@@ -27,7 +27,16 @@ export default class InfoComponent extends Component {
 				<Text></Text>
 				<Text style={{fontSize: 19, fontWeight:'bold', color:'orange'}}>-- Welcome to Space In Vader 3.0 --</Text>
 				<Text></Text>
+				<Text style={{fontSize: 20, fontWeight:'bold', color:'red'}}>RULES: </Text>
 				<Text></Text>
+				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>1. No mercy</Text>
+				<Text></Text>
+				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>2. Stay alive</Text>
+				<Text></Text>
+				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>3. One shot per 5secs</Text>
+				<Text></Text>
+				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>4. KILL ALL THE ALIENS!!</Text>
+				
 				<Text></Text>
 				<Icon
 				name="reddit-alien"
@@ -36,22 +45,11 @@ export default class InfoComponent extends Component {
 				/>
 				
 				<Text></Text>
-				<Text style={{fontSize: 20, fontWeight:'bold', color:'red'}}>RULES: </Text>
-				
-				<Text></Text>
-				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>1. Do not have mercy</Text>
-				<Text></Text>
-				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>2. Stay alive</Text>
-				<Text></Text>
-				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>3. One shot per 5secs</Text>
-				<Text></Text>
-				<Text style={{fontSize: 18, fontWeight:'bold', color:'red'}}>4. KILL ALL THE ALIENS!!!!</Text>
-				<Text></Text>
-				<Text></Text>
-				<Text></Text>
 
+				<Text style={{fontSize: 19, fontWeight:'bold', color:'red'}}>Instructions</Text>
+				<Text style={{fontSize: 17, fontWeight:'normal', color:'orange'}}>Press the shooting button and you will summon a small ship to shoot rainbow lasers at enemy. Move the ship by sliding your fingers on the screen.</Text>
 				<Text></Text>
-				<Text style={{fontSize: 15, fontWeight:'bold', color:'orange'}}>Note: Try all the difficulties for an experience out of this world! :)</Text>
+				<Text style={{fontSize: 13, fontWeight:'bold', color:'orange'}}>Note: Try all the difficulties for an experience out of this world! :)</Text>
 				<Text></Text>
 				<Text></Text>
 				<Text></Text>
