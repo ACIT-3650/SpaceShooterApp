@@ -32,7 +32,7 @@ const SpaceApp = StackNavigator({
     screen: SpaceShip
   },
   Info: {
-    screen: InfoComponent
+    screen: GameoverComponent
  }
 },{ 
     headerMode: 'screen' 

@@ -29,6 +29,8 @@ export default class HomeScreenComponent extends Component {
         		}}source={require('../pictures/wallpaper.jpg')}> 	
 				
 			</Image>
+			<Text></Text>
+
 
 			<Image source={require('../pictures/LOGO.png')}> 	
 				
@@ -61,14 +63,12 @@ export default class HomeScreenComponent extends Component {
 					title="HARD"
 					color="#ff3333"
 				/>
-				<Text></Text>
+				
 			</View>
 
 				<Image style={{width: 150, height: 150}} source={require('../pictures/helmet.png')}> 	
 				
 				</Image>
-
-				<Text></Text>
 
 				<Button
 					onPress={() => navigate('Info')}

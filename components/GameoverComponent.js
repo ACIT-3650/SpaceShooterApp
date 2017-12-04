@@ -28,7 +28,7 @@ export default class GameoverComponent extends Component {
 				</Image>
 
 				
-				<Text style={{fontSize: 22, fontWeight:'bold', color:'red'}}>Play again if you DARE</Text>
+				<Text style={{fontSize: 22, fontWeight:'bold', color:'red'}}>BETTER LUCK NEXT TIME</Text>
 				<Text></Text>
 				<Text></Text>
 				<Text></Text>
@@ -63,7 +63,7 @@ export default class GameoverComponent extends Component {
 				<Icon
 					name="gamepad"
 					size={100}
-					color="yellow"
+					color="orange"
 				/>
 				
 				<Text style={{fontSize: 10, fontWeight:'bold', color:'orange'}}>Version 3.0</Text>
