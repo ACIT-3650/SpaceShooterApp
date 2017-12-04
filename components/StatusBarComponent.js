@@ -20,24 +20,10 @@ export default class StatusBarComponent extends Component {
 		return (
 			<View>
 			<StatusBar 
-			backgroundColor="white"
-			barStyle={this.state.barStyle}
+			backgroundColor="black"
+			barStyle="dark-content"
 			/>
-			<Text>Test</Text>
 			</View>
 			)
 	}
 }
-
-/*
-	render() {
-		return (
-			<View>
-				<StatusBar 
-				backgroundColor='black'
-				barStyle="light-content"
-				/>
-			</View>
-		)
-	}
-}*/

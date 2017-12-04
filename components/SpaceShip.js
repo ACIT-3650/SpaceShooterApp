@@ -119,7 +119,7 @@ export default class SpaceShip extends Component {
                 <Image  style={{
                   flex: 1,
                   position: "absolute",
-                  zIndex: -2
+                  zIndex: -5
                 }}source={require('../pictures/wallpaper.jpg')}>    
                 
             </Image>
@@ -151,6 +151,7 @@ export default class SpaceShip extends Component {
                             position: "absolute",
                             bottom: 0, 
                             alignSelf: 'flex-end',
+                            zIndex: -4
 
                         }}
                         disabled={this.state.showShoot}
